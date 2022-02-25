@@ -11,6 +11,7 @@ const MainPage = () => {
 export default MainPage;
 
 const Wrapper = styled.main`
+background: #f1f7fc; 
 display: grid;
 grid-template-columns: 1fr;
 width: 100%;
