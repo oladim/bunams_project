@@ -9,7 +9,7 @@ const Login = () => {
     return <Wrapper>
       <div className="login-back">
     <div className="form-container">
-    <img src={image}   height={500} width={400} />
+    <img src={image}   height={500} width={400} alt="Logon Image"/>
           <form method="POST" onSubmit={validateUser}>
             <h6 className="text-center"><strong>Sign</strong> in</h6>
              
@@ -22,8 +22,8 @@ const Login = () => {
                  <label htmlFor="password"> Password </label><br />
                  <input  type="password" name="password" id="password"  className="form-control" />
              </div>
-             <span className='rememberme'><a href="">Remember me</a></span>
-             <span className='forgetpassword'><a href="">Forgot password</a></span>
+             <span className='rememberme'><a href="#">Remember me</a></span>
+             <span className='forgetpassword'><a href="#">Forgot password</a></span>
              <Link to="/dashboard"><input type="submit" value="SIGN IN"  className='btn-primary'/></Link>
              <span className='forgetpassword'> <p className='regpara'>Don't have an account  <a href="" className='register'>Register </a></p></span>
      </form>
