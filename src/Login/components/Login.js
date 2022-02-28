@@ -25,7 +25,7 @@ const Login = () => {
              <span className='rememberme'><a href="/">Remember me</a></span>
              <span className='forgetpassword'><a href="/">Forgot password</a></span>
              <Link to="/dashboard"><input type="submit" value="SIGN IN"  className='btn-primary'/></Link>
-             <span className='forgetpassword'> <p className='regpara'>Don't have an account  <a href="" className='register'>Register </a></p></span>
+             <span className='forgetpassword'> <p className='regpara'>Don't have an account  <a href="/" className='register'>Register </a></p></span>
      </form>
      </div>
 </div>
