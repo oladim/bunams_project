@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Landing = () => {
     return <Wrapper>
     <div>
-          Welcome to Dashboad
+          Welcome to Dashboad of Asset
     </div>
     </Wrapper>
 }
