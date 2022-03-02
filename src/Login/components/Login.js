@@ -63,7 +63,7 @@ body{
 
 @media (max-width:991px) {
     .login-back form {
-        padding: 40px
+        padding: 39px
     }
 }
 
