@@ -6,7 +6,6 @@ import * as AiIcons from 'react-icons/ai';
 import { LandingData } from './LandingData';
 import SubMenu from './SubMenu';
 
-
 const Landing = () => {
    const [sidebar, setSidebar] = useState(false)
    const showSidebar = () => setSidebar(!sidebar)
