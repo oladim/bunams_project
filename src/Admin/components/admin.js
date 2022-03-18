@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Landing } from "../../allexports";
-import {MenuItem, FormControl, InputLabel, Select, ListItemIcon, ListItemText  } from "@mui/material";
-import { green } from "@mui/material/colors";
-import { BiUserPin } from 'react-icons/bi';
-import { ImUserPlus } from 'react-icons/im';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
-import { RiDeleteBin2Fill } from 'react-icons/ri';
+import {MenuItem, Select, ListItemIcon, ListItemText  } from "@mui/material";
+// import { green } from "@mui/material/colors";
+// import { BiUserPin } from 'react-icons/bi';
+// import { ImUserPlus } from 'react-icons/im';
+// import { BsFillInfoCircleFill } from 'react-icons/bs';
+// import { RiDeleteBin2Fill } from 'react-icons/ri';
 import { buttonUserData, buttonGroupData } from "./buttonsData";
 import BasicTable from "./tablecontent";
 
@@ -56,11 +56,11 @@ color: black;
 
 export const AdminPage = () => {
     const classes = useStyles();
-const [textValue, setTextValue] = useState("Ten");
-    const handleChange = (e) => {
-        e.preventDefault();
+// const [textValue, setTextValue] = useState("Ten");
+//     const handleChange = (e) => {
+//         e.preventDefault();
 
-    }
+//     }
     return <Wrapper>
     <Landing />
     <div className="headingdetails">
