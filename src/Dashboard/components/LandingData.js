@@ -27,7 +27,7 @@ export const LandingData = [
     },
     {
         title: "Admin",
-        path: "/user",
+        path: "/admin",
         icon: <RiAdminLine.RiAdminLine/>,
     },
     {

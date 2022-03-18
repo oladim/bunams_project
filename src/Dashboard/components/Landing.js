@@ -7,7 +7,7 @@ import { LandingData } from './LandingData';
 import SubMenu from './SubMenu';
 
 const Landing = () => {
-   const [sidebar, setSidebar] = useState(false)
+   const [sidebar, setSidebar] = useState(true)
    const showSidebar = () => setSidebar(!sidebar)
     return <Wrapper>
     <div>
