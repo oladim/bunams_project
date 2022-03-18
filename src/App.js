@@ -1,4 +1,4 @@
-import { MainPage, Landing } from "./allexports";
+import { MainPage, Landing, AdminPage } from "./allexports";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
       <Routes>
       <Route exact path="/" element={<MainPage />} />
       <Route path="/dashboard" element={<Landing />} />
+      <Route path="/admin" element={<AdminPage />} />
       </Routes>
     </Router>
   </>;
