@@ -13,12 +13,10 @@ const SidebarLink  = styled(Link)`
    text-decoration: none;
    font-size: 18px;
    &:hover{
-       background: #252831;
-       border-left: 4px solid #632ce4;
+       border-left: 4px solid #275785;
        corsor: pointer;
    }
 `;
-
 const SidebarLabel = styled.span` 
    margin-left: 16px;
 `;
@@ -26,7 +24,6 @@ const SidebarLabel = styled.span`
 const SidebarIcon = styled.span` 
    margin-left: 50px;
 `;
-
     const SubMenu = ({ item }) =>{
     const [subnav, setSubnav] = useState(false)
     const showSubnav = () => setSubnav(!subnav)
