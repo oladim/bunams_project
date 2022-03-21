@@ -23,7 +23,14 @@ const useStyles = makeStyles((theme) => ({
     borderColor: '#FF0000',      //<------------ this does nothing
   },
   menuitems: {
- 
+    color: "blue",
+      fontWeight: 600
+  },
+  selected: {
+    '&.Mui-selected': {
+      color: "blue",
+      fontWeight: 600
+  }
   }
 }));
 
@@ -70,7 +77,7 @@ export const AdminPage = () => {
       {buttonUserData.map((data)=>{
         const {text, icon, value} = data;
         console.log(text);
-        return <CustomMenuItem value={value} divider={true} className={classes.menuitems} key={data.id}>
+        return <CustomMenuItem selected value={value} divider={true} className={classes.menuitems} key={data.id}>
             <ListItemIcon>{icon}</ListItemIcon>
             <ListItemTextModified>{text}</ListItemTextModified>
           </CustomMenuItem>
@@ -134,7 +141,7 @@ gap: 20px;
     font-size:20px;
     color: white;
   }
-  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
+  .MuiSelect-select{
   align-items: center;
   display: inline-flex;
 }
