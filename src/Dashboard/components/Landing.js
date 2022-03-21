@@ -1,71 +1,56 @@
+import React, {useState} from 'react';
 import styled from "styled-components";
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { LandingData } from './LandingData';
-import SubMenu from './SubMenu';
+//import * as FaIcons from "react-icons/fa"; 
+//import * as AiIcons from 'react-icons/ai'
+import {Link} from 'react-router-dom';
+import {LandingData} from './LandingData'
+import './Landing.css';
+import './Search.css';
+import { IconContext } from 'react-icons'
+import imageLogo from './bunamsBabcock.png';
+import Search from './Search';
 
 const Landing = () => {
-   const [sidebar, setSidebar] = useState(true)
-   const showSidebar = () => setSidebar(!sidebar)
-    return <Wrapper>
-    <div>
-    <Nav>
-         <NavIcon to="#">
-             <FaIcons.FaBars onClick={showSidebar}/>
-         </NavIcon>
-     </Nav>
-     <SidebarNav  sidebar={sidebar}>
-         <SidebarWrap>
-         <NavIcon to="#">
-            <AiIcons.AiOutlineClose onClick={showSidebar}  />
-         </NavIcon>
-         {LandingData.map((item, index) =>{
-            return <SubMenu item = {item} key ={index} />;
-         })}
-         </SidebarWrap>
-     </SidebarNav>
-    </div>
-    </Wrapper>
+    const [sidebar, setSidebar] = useState(true);
+
+   
+    return <div className='Wrapper'>
+        <div className='sidebar'>
+            <IconContext.Provider value={{color: '#fff'}}>
+                
+                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                    <ul className='nav-menu-items'>
+                    <img src={imageLogo} className='SidebarLogo' height= {100} width={100} alt="Logon"/>
+                        {LandingData.map((item, index) =>{
+                            return (
+                                <li key={index} className={item.cName}>
+                                    <Link to={item.path}>
+                                        {item.icon}
+                                        <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </nav>
+                </IconContext.Provider>
+            </div>
+            <div className='main_content'>
+                <div className='header'> <Search /> </div>
+                <div className='info'>
+                    
+                    <div className= "row">
+                    
+                </div>
+                    
+                </div>
+            </div>
+            </div>
+    
 }
 
-export default Landing;
+export default Landing
 
-const Wrapper = styled.div`
+// const Wrapper = styled.div`
 
-`
-const Nav = styled.div`
-   background: #fff;
-   height: 80px;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-   top: 0;
-`
-
-const NavIcon = styled(Link)`
-   margin-left: 2rem;
-   font=size: 2rem;
-   height: 80px;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-`
-const SidebarNav = styled.nav`
-  background:  #004084;
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: ${({ sidebar })  => (sidebar ? '0' : '-100%')};
-  transition: 350ms;
-  z-index: 10;
-`
-const SidebarWrap = styled.div`
-   width: 100%;
-`
-
-
+// `;
