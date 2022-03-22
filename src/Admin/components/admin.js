@@ -22,16 +22,7 @@ const useStyles = makeStyles((theme) => ({
   select: {
     borderColor: '#FF0000',      //<------------ this does nothing
   },
-  menuitems: {
-    color: "blue",
-      fontWeight: 600
-  },
-  selected: {
-    '&.Mui-selected': {
-      color: "blue",
-      fontWeight: 600
-  }
-  }
+  
 }));
 
 
@@ -39,11 +30,8 @@ const CustomSelect = styled(Select)`
 background-color: #004084;
 width: 180px;
 height: 40px;
-
 `
 const CustomSelectGroup = styled(Select)`
-background-color: "ffffff";
-color: black;
 width: 180px;
 height: 40px;
 `
@@ -77,7 +65,7 @@ export const AdminPage = () => {
       {buttonUserData.map((data)=>{
         const {text, icon, value} = data;
         console.log(text);
-        return <CustomMenuItem selected value={value} divider={true} className={classes.menuitems} key={data.id}>
+        return <CustomMenuItem value={value} divider={true} className={classes.menuitems} key={data.id}>
             <ListItemIcon>{icon}</ListItemIcon>
             <ListItemTextModified>{text}</ListItemTextModified>
           </CustomMenuItem>
@@ -89,7 +77,7 @@ export const AdminPage = () => {
         const {text, icon, value} = data;
         return <CustomMenuItem value={value} divider={true} className={classes.menuitems} key={data.id}>
             <ListItemIcon>{icon}</ListItemIcon>
-            <ListItemTextModified className="textColor">{text}</ListItemTextModified>
+            <ListItemTextModified>{text}</ListItemTextModified>
           </CustomMenuItem>
       })}
     </CustomSelectGroup>
@@ -112,7 +100,7 @@ grid-template-columns: 250px auto;
 gap: 20px;
 .headingdetails{
     display: grid;
-    grid-template-rows: 150px auto;
+    grid-template-rows: 200px auto;
   
     .iconsItem > svg{
       color: white;
@@ -120,8 +108,6 @@ gap: 20px;
       transform: none;
       height: 100%;
       top: 0;
-      object-fit: cover;
-    
   }
   .iconsItemGroup > svg{
     color: #004084;
@@ -129,7 +115,7 @@ gap: 20px;
     transform: none;
     height: 100%;
     top: 0;
-    object-fit: cover;
+    
   
 }
   .usersgroup{
