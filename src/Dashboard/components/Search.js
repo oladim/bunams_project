@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import * as AiOutlineSearch from 'react-icons/ai';
-import * as MdOutlineDoorbell from 'react-icons/md';
+// import * as MdOutlineDoorbell from 'react-icons/md';
 import * as VscBellDot from 'react-icons/vsc';
 import * as MdOutlineDarkMode from 'react-icons/md';
-import { Grid } from "@mui/material";
+// import { Grid } from "@mui/material";
 import profileImage from './profileimage.PNG';
 
 const Search = () => {
@@ -33,10 +33,7 @@ const Search = () => {
 export default Search;
 
 const Wrapper = styled.div`
-body{
-    background-color: skyblue;
-    margin: 0;
-}
+
 .header{
    width: 100%;
    background: #142b47;
@@ -151,6 +148,5 @@ input[type=text]{
     border-bottom: 2px solid #dfe7f1;
     margin-bottom: 5px;
 }
-
 `
 

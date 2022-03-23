@@ -4,14 +4,12 @@ import styled from "styled-components";
 //import * as AiIcons from 'react-icons/ai'
 import {Link} from 'react-router-dom';
 import {LandingData} from './LandingData'
-import './Landing.css';
-import './Search.css';
 import { IconContext } from 'react-icons'
 import imageLogo from './bunamsBabcock.png';
-import Search from './Search';
+// import Search from './Search';
 
 const Landing = () => {
-    const [sidebar, setSidebar] = useState(true);
+    const [sidebar] = useState(true);
 
    
     return <Wrapper>

@@ -1,5 +1,5 @@
 import React from 'react'
-import * as FaIcons from "react-icons/fa"; 
+// import * as FaIcons from "react-icons/fa"; 
 import * as AiIcons from 'react-icons/ai'
 import * as MdWebAsset from 'react-icons/md';
 import * as RiAdminLine from 'react-icons/ri';

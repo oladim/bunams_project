@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 120,
   },
   select: {
-    borderColor: '#FF0000',      //<------------ this does nothing
-  },
+    border: '1px solid red',
+  }
   
 }));
 
@@ -61,11 +61,12 @@ export const AdminPage = () => {
     <div className="headingdetails">
     <div>Here is the asset page</div>
     <div className="usersgroup">
-    <CustomSelect defaultValue={10} className="iconsItem">
+
+    <CustomSelect defaultValue={10} label="test" className="iconsItem">
       {buttonUserData.map((data)=>{
         const {text, icon, value} = data;
         console.log(text);
-        return <CustomMenuItem value={value} divider={true} className={classes.menuitems} key={data.id}>
+        return <CustomMenuItem value={value} divider={true} key={data.id} classes={{Select: classes.select}}>
             <ListItemIcon>{icon}</ListItemIcon>
             <ListItemTextModified>{text}</ListItemTextModified>
           </CustomMenuItem>
@@ -75,13 +76,13 @@ export const AdminPage = () => {
     <CustomSelectGroup defaultValue={10} className="iconsItemGroup">
     {buttonGroupData.map((data)=>{
         const {text, icon, value} = data;
-        return <CustomMenuItem value={value} divider={true} className={classes.menuitems} key={data.id}>
+        return <CustomMenuItem value={value} divider={true} key={data.id} classes={{Select: classes.Select}}>
             <ListItemIcon>{icon}</ListItemIcon>
             <ListItemTextModified>{text}</ListItemTextModified>
           </CustomMenuItem>
       })}
     </CustomSelectGroup>
-
+ 
 
     </div>
     
@@ -131,6 +132,9 @@ gap: 20px;
   align-items: center;
   display: inline-flex;
 }
+.MuiOutlinedInput-root{
+  color: red;
+}
 .css-10hburv-MuiTypography-root{
   color: white;
   font-size: 12px;
@@ -140,6 +144,9 @@ gap: 20px;
   font-size: 12px;
 }
 
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  color: green;
+}
 .usersHeading{
   margin-top: 20px;
   width: 90%;
